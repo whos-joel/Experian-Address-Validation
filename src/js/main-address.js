@@ -93,7 +93,7 @@ ContactDataServices.address = function(customOptions){
       instance.events.trigger("pre-search", instance.currentSearchTerm);
 
       // Construct the new Search URL
-      var url = ContactDataServices.urls.construct.address.search(instance);
+      var url = ContactDataServices.urls.construct.address.searchUrl(instance);
 
       // Store the last search term
       instance.lastSearchTerm = instance.currentSearchTerm;
