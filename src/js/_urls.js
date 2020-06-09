@@ -10,7 +10,7 @@ ContactDataServices.urls = {
       searchData: function(instance){
         var data = {
           country_iso: instance.currentCountryCode,
-          components: {unspecified: [encodeURIComponent(instance.currentSearchTerm)]},
+          components: {unspecified: [instance.currentSearchTerm]},
           dataset: instance.currentDataSet,
           take: (instance.maxSize || instance.picklist.maxSize)
         };
