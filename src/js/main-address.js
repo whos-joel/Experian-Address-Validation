@@ -398,9 +398,9 @@ ContactDataServices.address = function(customOptions){
     },
     // Add emphasis to the picklist items highlighting the match
     addMatchingEmphasis: function(item){
-      let dataset= '';
+      var dataset= '';
       if(item.dataset){
-        dataset = '['+dataset+']'
+        dataset = '['+dataset+']';
       }
       var highlights = item.matched || [],
             label = dataset + item.text;
