@@ -584,7 +584,7 @@ ContactDataServices.address = function(customOptions){
     addMatchingEmphasis: function(item){
       var dataset= '';
       if(item.dataset){
-        dataset = '['+dataset+']';
+        dataset = '['+item.dataset+']';
       }
       var highlights = item.matched || [],
             label = dataset + item.text;
