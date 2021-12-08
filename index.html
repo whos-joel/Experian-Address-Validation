@@ -245,7 +245,7 @@
 				<option value="UGA">Uganda</option>
 				<option value="UKR">Ukraine</option>
 				<option value="ARE">United Arab Emirates</option>
-				<option value="GBR;mrf,nyb">United Kingdom</option>
+				<option value="GBR;mrf,nyb" selected>United Kingdom</option>
 				<option value="USA">United States</option>
 				<option value="URY">Uruguay</option>
 				<option value="UZB">Uzbekistan</option>
@@ -285,11 +285,28 @@
 			<input type="text" name="country" id="country">
 		</div>
 	</form>
-
+	<script src="dist/js/jquery-3.5.1.js"></script>
+	<script src="dist/js/popper.js"></script>
+	<script src="dist/js/bootstrap.js"></script>
 	<script src="dist/js/contact-data-services.js"></script>
 	<script>
 		// Set the custom options
 		var options = {
+			token: "a2d26240-22fc-41e6-a50e-2266857b26abX",
+			placeholderText: "E.g. 'CR0 3RL' or '36 Factory Lane'", 
+			applyFocus: true,
+			manualEntry:{ visible: true},
+			infoAlert:{
+				visible: true,
+				text: "And there's more...",
+				popoverBtn: {
+					visible: true,
+					text: "Write more stuff",
+					title: "Address Info",
+					icon: "<i>i</i>"
+				}
+			},
+			maxSize: 10,
 			elements: {
 				input: document.querySelector("input[name='address-input']"),
 				countryList: document.querySelector("select"),
@@ -326,6 +343,10 @@
 		// Show a message if the request is unauthorised (token is invalid)
 		address.events.on("request-error-401", function() {
 			ContactDataServices.ua.banner.show("<a href='https://github.com/experianplc/Experian-Address-Validation#tokens'>Please provide a valid token for Experian Address Validation.</a>");
+		});
+
+		address.events.on("manual-entry", function() {
+			console.log("manual entry clicked")
 		});
 	</script>
 </body>

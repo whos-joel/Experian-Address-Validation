@@ -14,7 +14,7 @@ label {
 	color: @gray-dark;
 	display: block;
 	font-size: @font-size;
-	margin: @margin-top auto 2px;
+	margin: @margin-top auto 3px;
 }
 
 input[type="text"], select {
@@ -46,12 +46,16 @@ input[type="submit"] {
 .address-picklist-container {
 	position: absolute;
 	width: 100%;
+	
+	&.has-content{
+		border: 2px solid #ccc;
+	}
 }
 
 .address-picklist {
 	background-color: white;
-	border: 2px solid @violet;
-	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	// border: 2px solid @violet;
+	// box-shadow: 0 6px 12px rgba(0,0,0,.175);
 	box-sizing: border-box;
 	max-height: 206px;
 	overflow: auto;

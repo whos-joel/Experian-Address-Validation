@@ -12,7 +12,7 @@ ContactDataServices.urls = {
           country_iso: instance.currentCountryCode,
           components: {unspecified: [instance.currentSearchTerm]},
           dataset: instance.currentDataSet,
-          take: (instance.maxSize || instance.picklist.maxSize)
+          max_suggestions: (instance.maxSize || instance.picklist.maxSize)
         };
 
         if (instance.elements.location) {

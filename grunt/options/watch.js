@@ -4,7 +4,7 @@ module.exports = function(grunt){
      */
     grunt.config('watch', {
       files: ['<%= jshint.files %>', '<%= less.dev.options.paths %>'],
-      tasks: ['jshint', 'jasmine', 'less']
+      tasks: ['jshint', 'jasmine', 'less', 'concat']
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');

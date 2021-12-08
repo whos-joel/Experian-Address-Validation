@@ -116,7 +116,7 @@ label {
   color: #575755;
   display: block;
   font-size: 14px;
-  margin: 5px auto 2px;
+  margin: 5px auto 3px;
 }
 input[type="text"],
 select {
@@ -146,10 +146,11 @@ input[type="submit"]:hover {
   position: absolute;
   width: 100%;
 }
+.address-picklist-container.has-content {
+  border: 2px solid #ccc;
+}
 .address-picklist {
   background-color: white;
-  border: 2px solid #632678;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-sizing: border-box;
   max-height: 206px;
   overflow: auto;
