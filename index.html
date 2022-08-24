@@ -245,7 +245,7 @@
 				<option value="UGA">Uganda</option>
 				<option value="UKR">Ukraine</option>
 				<option value="ARE">United Arab Emirates</option>
-				<option value="GBR;mrf,nyb" selected>United Kingdom</option>
+				<option value="GBR" selected>United Kingdom</option>
 				<option value="USA">United States</option>
 				<option value="URY">Uruguay</option>
 				<option value="UZB">Uzbekistan</option>
@@ -292,7 +292,7 @@
 	<script>
 		// Set the custom options
 		var options = {
-			token: "a2d26240-22fc-41e6-a50e-2266857b26abX",
+			token: "a2d26240-22fc-41e6-a50e-2266857b26ab",
 			placeholderText: "E.g. 'CR0 3RL' or '36 Factory Lane'", 
 			applyFocus: true,
 			manualEntry:{ visible: true},
@@ -348,6 +348,11 @@
 		address.events.on("manual-entry", function() {
 			console.log("manual entry clicked")
 		});
+
+		address.events.on("request-error-403",
+        function () {
+            alert("Error")
+        });
 	</script>
 </body>
 
